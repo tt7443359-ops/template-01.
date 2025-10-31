@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="style.css"/>
     <script src="js/bootstrap.min.js"></script>
+    <script src="" crossorigin="anonymous"></script>
+    <Script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+		items.forEach((el) => {
+			const minPerSlide = 4
+			let next = el.nextElementSibling
+			for (var i=1; i<minPerSlide; i++) {
+				if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+        }
+    })
+    </Script>
 </head>
 <body>
     <div id="header">
@@ -17,9 +35,54 @@
                 </div>
                 <div class="col-md-10">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-6">
                             <div class="logo">
-                                <img src="images/logo">
+                                <img src="images/logo-magenta.png">
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-6">
+                            <div class="template-menu">
+                                <nav class="navbar navbar-expand-lg navbar-light">
+                                    <div class="container-fluid">
+                                      
+                                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                      </button>
+                                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                          <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="#">Link</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="#">Link</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="#">Link</a>
+                                          </li>
+                                          <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                              Dropdown
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              <li><a class="dropdown-item" href="#">Action</a></li>
+                                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                                              <li><hr class="dropdown-divider"></li>
+                                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                          </li>
+                                          <li class="nav-item">
+                                            <button class="btn btn-outline-success" type="submit">Search</button>
+                                            <button class="btn btn-outline-success" type="submit">Search</button>
+                                          </li>
+
+                                        </ul>
+                                        
+                                      </div>
+                                    </div>
+                                  </nav>
                             </div>
                         </div>
                     </div>
@@ -30,14 +93,266 @@
             </div>
         </div>
     </div>
+    <!--end #header-->
 
     <div id="main">
+        <div id="section-1" class="section">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="title text-center">
+                        Enhance your website design with Martex
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <p class="text-center">
+                                Mauris donec ociis diam magnis sapien sagitis sapien tempor volute 
+                                gravida aliquet tortor undo aliquet an egestas in magna egestas sapien
+                                quaerat
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
 
+                <div class="col-md-6 offset-md-3">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-9">
+                                <input type="text" placeholder="Search...">
+                            </div>
+                            <div class="col-3">
+                                <input type="button" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="brading-slider">
+                <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-1.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-5.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-4.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-5.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-7.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-1.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-5.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-4.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-5.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-7.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-1.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-5.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-4.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-5.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+                        <div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="images/brand-7.png" class="img-fluid">
+								</div>
+								<!--<div class="card-img-overlay">Slide 1</div>-->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</a>
+				<a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</a>
+			</div>
+            </div>
+            <!-- end .brading-slider-->
+        </div>
+    </div>
+    <!--end #main-->
 
     <div id="footer">
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="widget">
+                        <div class="footer-logo">
+                            <img src="images/logo-magenta.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col">
+                            <div class="widget">
+                                <h3 class="title">
+                                    Company
+                                </h3>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">About Us</a></li>
+                                </ul>
+                            </div>
+                                <div class="col">
+                            <div class="widget">
+                                <h3 class="title">
+                                    Company
+                                </h3>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <div class="title">
+                            <h3>
+                            Connect With Us
+                            </h3>
+                            <P>
+                                <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+                            </P>
+                            <div class="social-icon">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-telegram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12"> <hr> </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="info">
+                            <P>© 2023 Martex. All Rights Reserved</P>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="copywriter text-end">
+                            <P>Made with by @DSAThemes</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--end #foorter-->
 
 </body>
 </html>

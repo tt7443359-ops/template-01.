@@ -1,0 +1,83 @@
+.logo img{
+    width: 250px;
+    height: auto;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.template-menu .nav-item a.nav-link{
+    color: #1d222f!important;
+    font-size: 19px;
+    font-weight: 500;
+}
+.template-menu .nav-item{
+    padding: 10px 15px;
+}
+.social-icon{
+    color: red;
+}
+.social-icon .fa-brands{
+    font-size: 20px;
+}
+.widget .footer-logo img{
+    width: 250px;
+}
+.widget ul{margin: 0; padding: 0;}
+.widget ul li{list-style: none; margin: 0px; padding: 0px;}
+.widget ul li a{
+    text-decoration: none;
+    color: #6c757d;
+}
+#section-1{
+    background-image: url(images/hero-17.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding: 50px;
+}
+#section-1 h2.title{font-size: 100px;}
+#section-1 p{font-size: 25px;}
+#section-1 input{width: 100%;padding: 10px;}
+
+/* slider brading */
+
+ @media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
+
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(25%);
+		}
+
+		.carousel-inner .carousel-item-start.active, 
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-25%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start { 
+		transform: translateX(0);
+	}
+
+/* endg slider brading */
+
+.brading-slider{
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+.brading-slider .card{ background-color: transparent !important;}
